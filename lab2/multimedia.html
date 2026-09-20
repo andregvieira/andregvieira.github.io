@@ -3,31 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odivelas - Multimédia</title>
+    <title>Osaka - Multimédia</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      h1 {
-        color: white;
-        text-shadow: 2px 2px 4px #000000;
-      }
-      figure {
-        max-width: 500px;
-        margin: 0;
-      }
-      figure img {
-        width: 100%;
-        border-radius: 8px;
-      }
-      .galeria {
+      .fotografias {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
+      }
+
+      .fotografias img {
+        width: 150px;
+        height: 100px;
+        border-radius: 20px;
+      }
+
+      iframe {
+        border: 0;
+        max-width: 100%;
+      }
+
+      .poema p {
+        margin: 4px 0;
+      }
+
+      .poema p:nth-child(odd) {
+        color: #c62828;
+      }
+
+      .poema p:nth-child(even) {
+        padding-left: 24px;
+        color: #333;
+        font-style: italic;
+      }
+
+      .poema p:first-child {
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>A minha Cidade</h1>
+      <h1>Osaka</h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="local.html">Localização</a>
@@ -36,40 +54,75 @@
         <a href="../index.html">Página Inicial</a>
       </nav>
     </header>
+    <img
+      src="images/banner.jpg"
+      alt="Horizonte de Osaka ao anoitecer, visto do Umeda Sky Building"
+    />
     <main>
       <h2>Multimédia</h2>
-      <p>Aqui ficam algumas imagens de Odivelas.</p>
-      <div class="galeria">
-        <figure>
-          <img src="images/Odivelas.jpg" alt="Vista de Odivelas" />
-          <figcaption>Ilustração do horizonte da cidade.</figcaption>
-        </figure>
-        <!--
-          Adiciona aqui as tuas próprias fotos de Odivelas.
-          Coloca o ficheiro de imagem dentro da pasta "images" e repete
-          este bloco <figure> com o nome do ficheiro e uma legenda.
-        -->
-        <figure>
-          <img src="images/mosteiro.jpg" alt="Mosteiro de São Dinis" />
-          <figcaption>Mosteiro de São Dinis, em Odivelas.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/parque.jpg" alt="Parque da Cidade de Odivelas" />
-          <figcaption>
-            Parque da Cidade, um dos espaços verdes do concelho.
-          </figcaption>
-        </figure>
-      </div>
+      <p>Nesta página encontra conteúdos multimédia.</p>
       <p>
-        Também podes ver mais vídeos sobre Odivelas no
-        <a
-          href="https://www.youtube.com/user/videoscmodivelas"
-          target="_blank"
-          rel="noopener"
-        >
-          canal oficial da Câmara Municipal de Odivelas no YouTube </a
-        >.
+        <a href="#fotografias">Fotografias</a>
+        <a href="#video">Vídeo</a>
+        <a href="#poema">Poema</a>
       </p>
+
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="images/castelo.jpg" alt="Castelo de Osaka" />
+          <img src="images/dotonbori.jpg" alt="Canal de Dotonbori" />
+          <img src="images/neon.jpg" alt="Letreiros de néon" />
+          <img src="images/umeda.jpg" alt="Umeda Sky Building" />
+          <img src="images/tsutenkaku.jpg" alt="Torre Tsutenkaku" />
+          <img src="images/shitennoji.jpg" alt="Templo Shitennoji" />
+          <img src="images/sumiyoshi.jpg" alt="Santuário Sumiyoshi Taisha" />
+          <img src="images/fosso.jpg" alt="Fosso do castelo e arranha-céus" />
+        </div>
+        <p>
+          <small>
+            Fotografias: Wikimedia Commons — Syced (CC0), 32linesky (CC BY-SA
+            4.0), Joop Amsterdam (CC BY 2.0), Martin Falbisoner (CC BY-SA 4.0),
+            Sakai Yayoi (CC0), Guilhem Vellut (CC BY 2.0) e Saigen Jiro (CC0).
+            Imagem do topo: Kaiza96 (CC BY-SA 3.0).
+          </small>
+        </p>
+      </section>
+
+      <section>
+        <h3 id="video">Vídeo</h3>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/d-id1NZq8oQ"
+          title="12 atrações turísticas de Osaka, no Japão"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section>
+        <h3 id="poema">Poesia</h3>
+        <div class="poema">
+          <p>Osaka, cozinha do Japão,</p>
+          <p>o vapor do takoyaki sobe ao céu;</p>
+          <p>em Dotonbori o néon vira canção</p>
+          <p>e a noite veste-o como um véu.</p>
+          <p>No castelo, as sakuras vão caindo</p>
+          <p>sobre os fossos onde o tempo adormeceu;</p>
+          <p>quem chega cansado acaba sorrindo,</p>
+          <p>e, ao partir, já a saudade o prendeu.</p>
+        </div>
+      </section>
     </main>
     <footer>
       <p>DIW 2026</p>

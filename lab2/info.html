@@ -3,18 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odivelas - Informação</title>
+    <title>Osaka - Informações</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      h1 {
-        color: white;
-        text-shadow: 2px 2px 4px #000000;
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #999;
+        padding: 6px 12px;
+      }
+
+      th {
+        background-color: #fbe9e7;
+        color: #c62828;
+      }
+
+      td {
+        color: #333;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>A minha Cidade</h1>
+      <h1>Osaka</h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="local.html">Localização</a>
@@ -23,39 +37,80 @@
         <a href="../index.html">Página Inicial</a>
       </nav>
     </header>
+    <img
+      src="images/banner.jpg"
+      alt="Horizonte de Osaka ao anoitecer, visto do Umeda Sky Building"
+    />
     <main>
-      <h2>Informação</h2>
-      <ul>
-        <li><strong>Distrito:</strong> Lisboa</li>
-        <li><strong>Área:</strong> cerca de 26,6 km²</li>
-        <li>
-          <strong>População:</strong> cerca de 148 000 habitantes (Censos 2021)
-        </li>
-        <li><strong>Concelho criado em:</strong> 19 de novembro de 1998</li>
-        <li>
-          <strong>Freguesias:</strong> 7 — Caneças, Famões, Odivelas, Olival
-          Basto, Pontinha, Póvoa de Santo Adrião e Ramada
-        </li>
-      </ul>
+      <h2>Informações</h2>
       <p>
-        Odivelas é um dos concelhos mais jovens e mais pequenos de Portugal,
-        tendo sido criado a partir do desmembramento do concelho de Loures. É
-        conhecida pelo Mosteiro de São Dinis, um dos monumentos históricos mais
-        importantes da região, fundado no século XIV pelo rei D. Dinis.
+        Osaka é a terceira maior cidade do Japão. Eis alguns dados essenciais
+        sobre a cidade.
       </p>
-      <h3>Pontos de interesse</h3>
-      <ul>
-        <li>Mosteiro de São Dinis e São Bernardo</li>
-        <li>Parque da Cidade / Parque D. Dinis</li>
-        <li>Pinhal da Paiã, em Pontinha</li>
-        <li>Parque de Merendas da Serra da Amoreira, com vista sobre o Tejo</li>
-        <li>Biblioteca Municipal D. Dinis</li>
-      </ul>
-      <p>
-        Apesar de pequeno em área, o concelho tem uma vida cultural ativa e
-        continua a crescer, sendo hoje um dos territórios mais dinâmicos da Área
-        Metropolitana de Lisboa.
-      </p>
+
+      <table>
+        <caption>
+          Osaka em números
+        </caption>
+        <tbody>
+          <tr>
+            <th rowspan="2" scope="rowgroup">Demografia</th>
+            <td>População</td>
+            <td>cerca de 2,75 milhões de hab. (Censo 2020)</td>
+          </tr>
+          <tr>
+            <td>Densidade populacional</td>
+            <td>cerca de 12 200 hab./km²</td>
+          </tr>
+          <tr>
+            <th rowspan="3" scope="rowgroup">Geografia</th>
+            <td>Área</td>
+            <td>cerca de 225 km²</td>
+          </tr>
+          <tr>
+            <td>Região</td>
+            <td>Kansai</td>
+          </tr>
+          <tr>
+            <td>País</td>
+            <td>Japão</td>
+          </tr>
+          <tr>
+            <th scope="row">Website</th>
+            <td colspan="2">
+              <a href="https://www.city.osaka.lg.jp/" target="_blank"
+                >www.city.osaka.lg.jp</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section>
+        <h3>Curiosidades</h3>
+        <ul>
+          <li>
+            Osaka é conhecida como a «cozinha do Japão»: o takoyaki e o
+            okonomiyaki são especialidades locais.
+          </li>
+          <li>
+            O castelo de Osaka foi mandado construir por Toyotomi Hideyoshi em
+            1583; a torre principal atual é uma reconstrução de 1931.
+          </li>
+          <li>
+            O templo Shitennoji, fundado em 593 pelo príncipe Shotoku, é um dos
+            primeiros templos budistas do Japão.
+          </li>
+          <li>
+            Nas escadas rolantes de Osaka as pessoas ficam do lado direito, ao
+            contrário de Tóquio, onde ficam do lado esquerdo.
+          </li>
+          <li>
+            Osaka recebeu duas Exposições Mundiais: a de 1970 e a de 2025,
+            realizada na ilha artificial de Yumeshima.
+          </li>
+        </ul>
+      </section>
     </main>
     <footer>
       <p>DIW 2026</p>
