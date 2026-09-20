@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odivelas - Multimédia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      h1 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+      }
+      figure {
+        max-width: 500px;
+        margin: 0;
+      }
+      figure img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>A minha Cidade</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="local.html">Localização</a>
+        <a href="multimedia.html">Multimédia</a>
+        <a href="info.html">Informação</a>
+        <a href="../index.html">Página Inicial</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Multimédia</h2>
+      <p>Aqui ficam algumas imagens de Odivelas.</p>
+      <div class="galeria">
+        <figure>
+          <img src="images/Odivelas.jpg" alt="Vista de Odivelas" />
+          <figcaption>Ilustração do horizonte da cidade.</figcaption>
+        </figure>
+        <!--
+          Adiciona aqui as tuas próprias fotos de Odivelas.
+          Coloca o ficheiro de imagem dentro da pasta "images" e repete
+          este bloco <figure> com o nome do ficheiro e uma legenda.
+        -->
+        <figure>
+          <img src="images/mosteiro.jpg" alt="Mosteiro de São Dinis" />
+          <figcaption>Mosteiro de São Dinis, em Odivelas.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/parque.jpg" alt="Parque da Cidade de Odivelas" />
+          <figcaption>
+            Parque da Cidade, um dos espaços verdes do concelho.
+          </figcaption>
+        </figure>
+      </div>
+      <p>
+        Também podes ver mais vídeos sobre Odivelas no
+        <a
+          href="https://www.youtube.com/user/videoscmodivelas"
+          target="_blank"
+          rel="noopener"
+        >
+          canal oficial da Câmara Municipal de Odivelas no YouTube </a
+        >.
+      </p>
+    </main>
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+  </body>
+</html>
