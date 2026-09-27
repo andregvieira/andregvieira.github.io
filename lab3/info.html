@@ -24,6 +24,85 @@
       td {
         color: #333;
       }
+
+      .grelha {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "intro"
+          "tabela"
+          "curiosidades"
+          "img1"
+          "img2";
+        gap: 24px;
+        margin-top: 20px;
+      }
+
+      .grelha .vazio1,
+      .grelha .vazio2 {
+        display: none;
+      }
+
+      @media (width >= 900px) {
+        .grelha {
+          grid-template-columns: 2fr 1fr 1fr;
+          grid-template-areas:
+            "intro intro intro"
+            "tabela img1 vazio1"
+            "curiosidades img2 vazio2";
+        }
+
+        .grelha .vazio1,
+        .grelha .vazio2 {
+          display: block;
+        }
+      }
+
+      .intro {
+        grid-area: intro;
+        margin: 0;
+      }
+
+      .tabela {
+        grid-area: tabela;
+      }
+
+      .curiosidades {
+        grid-area: curiosidades;
+      }
+
+      .img1 {
+        grid-area: img1;
+        margin: 0;
+      }
+
+      .img2 {
+        grid-area: img2;
+        margin: 0;
+      }
+
+      .vazio1 {
+        grid-area: vazio1;
+      }
+
+      .vazio2 {
+        grid-area: vazio2;
+      }
+
+      .grelha figure img {
+        width: 100%;
+        height: 100%;
+        min-height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+
+      .grelha figcaption {
+        font-size: 0.75rem;
+        color: #777;
+        margin-top: 4px;
+      }
     </style>
   </head>
   <body>
@@ -43,74 +122,98 @@
     />
     <main>
       <h2>Informações</h2>
-      <p>
-        Osaka é a terceira maior cidade do Japão. Eis alguns dados essenciais
-        sobre a cidade.
-      </p>
 
-      <table>
-        <caption>
-          Osaka em números
-        </caption>
-        <tbody>
-          <tr>
-            <th rowspan="2" scope="rowgroup">Demografia</th>
-            <td>População</td>
-            <td>cerca de 2,75 milhões de hab. (Censo 2020)</td>
-          </tr>
-          <tr>
-            <td>Densidade populacional</td>
-            <td>cerca de 12 200 hab./km²</td>
-          </tr>
-          <tr>
-            <th rowspan="3" scope="rowgroup">Geografia</th>
-            <td>Área</td>
-            <td>cerca de 225 km²</td>
-          </tr>
-          <tr>
-            <td>Região</td>
-            <td>Kansai</td>
-          </tr>
-          <tr>
-            <td>País</td>
-            <td>Japão</td>
-          </tr>
-          <tr>
-            <th scope="row">Website</th>
-            <td colspan="2">
-              <a href="https://www.city.osaka.lg.jp/" target="_blank"
-                >www.city.osaka.lg.jp</a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="grelha">
+        <p class="intro">
+          Osaka é a terceira maior cidade do Japão. Eis alguns dados essenciais
+          sobre a cidade.
+        </p>
 
-      <section>
-        <h3>Curiosidades</h3>
-        <ul>
-          <li>
-            Osaka é conhecida como a «cozinha do Japão»: o takoyaki e o
-            okonomiyaki são especialidades locais.
-          </li>
-          <li>
-            O castelo de Osaka foi mandado construir por Toyotomi Hideyoshi em
-            1583; a torre principal atual é uma reconstrução de 1931.
-          </li>
-          <li>
-            O templo Shitennoji, fundado em 593 pelo príncipe Shotoku, é um dos
-            primeiros templos budistas do Japão.
-          </li>
-          <li>
-            Nas escadas rolantes de Osaka as pessoas ficam do lado direito, ao
-            contrário de Tóquio, onde ficam do lado esquerdo.
-          </li>
-          <li>
-            Osaka recebeu duas Exposições Mundiais: a de 1970 e a de 2025,
-            realizada na ilha artificial de Yumeshima.
-          </li>
-        </ul>
-      </section>
+        <div class="tabela">
+          <table>
+            <caption>
+              Osaka em números
+            </caption>
+            <tbody>
+              <tr>
+                <th rowspan="2" scope="rowgroup">Demografia</th>
+                <td>População</td>
+                <td>cerca de 2,75 milhões de hab. (Censo 2020)</td>
+              </tr>
+              <tr>
+                <td>Densidade populacional</td>
+                <td>cerca de 12 200 hab./km²</td>
+              </tr>
+              <tr>
+                <th rowspan="3" scope="rowgroup">Geografia</th>
+                <td>Área</td>
+                <td>cerca de 225 km²</td>
+              </tr>
+              <tr>
+                <td>Região</td>
+                <td>Kansai</td>
+              </tr>
+              <tr>
+                <td>País</td>
+                <td>Japão</td>
+              </tr>
+              <tr>
+                <th scope="row">Website</th>
+                <td colspan="2">
+                  <a href="https://www.city.osaka.lg.jp/" target="_blank"
+                    >www.city.osaka.lg.jp</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section class="curiosidades">
+          <h3>Curiosidades</h3>
+          <ul>
+            <li>
+              Osaka é conhecida como a «cozinha do Japão»: o takoyaki e o
+              okonomiyaki são especialidades locais.
+            </li>
+            <li>
+              O castelo de Osaka foi mandado construir por Toyotomi Hideyoshi em
+              1583; a torre principal atual é uma reconstrução de 1931.
+            </li>
+            <li>
+              O templo Shitennoji, fundado em 593 pelo príncipe Shotoku, é um
+              dos primeiros templos budistas do Japão.
+            </li>
+            <li>
+              Nas escadas rolantes de Osaka as pessoas ficam do lado direito, ao
+              contrário de Tóquio, onde ficam do lado esquerdo.
+            </li>
+            <li>
+              Osaka recebeu duas Exposições Mundiais: a de 1970 e a de 2025,
+              realizada na ilha artificial de Yumeshima.
+            </li>
+          </ul>
+        </section>
+
+        <figure class="img1">
+          <img
+            src="images/takoyaki.jpg"
+            alt="Takoyaki, comida típica de Osaka"
+          />
+          <figcaption>Takoyaki. Foto: kojikamei, Pixabay.</figcaption>
+        </figure>
+
+        <figure class="img2">
+          <img
+            src="images/castelo-ceu.jpg"
+            alt="Castelo de Osaka rodeado de árvores"
+          />
+          <figcaption>Castelo de Osaka. Foto: Webkims, Pixabay.</figcaption>
+        </figure>
+
+        <div class="vazio1"></div>
+        <div class="vazio2"></div>
+      </div>
     </main>
     <footer>
       <p>DIW 2026</p>
