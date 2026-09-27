@@ -1,51 +1,48 @@
-header { grid-area: h; }
-main { grid-area: main; }
-aside { grid-area: r; }
-footer { grid-area: footer; }
-
-
 body {
   min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template:
+    "h h" 80px
+    "main r" 1fr
+    "footer footer"
+    / 1fr 1fr;
+  gap: 10px;
   background-color: #b3b3b3;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80px 1fr;
-  grid-template-areas:
-    "h h "
-    "main r"
-    "footer footer";
-    gap:10x;
 }
 
 header {
-  padding: 0px 1fr;
-  background-color:white;
+  grid-area: h;
+  display: flex;
   align-items: center;
-  display:flex;
   justify-content: space-between;
+  padding: 0 20px;
+  background-color: white;
 }
 
 main {
-  padding: 0px 1fr;
+  grid-area: main;
+  padding: 0 20px;
   background-color: red;
 }
 
 section {
-  padding: 10px;
-  background-color: rgb(197, 121, 121);
   margin: 10px;
+  padding: 10px;
+  background-color: rgb(197 121 121);
 }
 
 aside {
+  grid-area: r;
   padding: 30px;
   background-color: green;
 }
 
 footer {
-  text-align: left;
+  grid-area: footer;
   padding: 10px;
+  text-align: left;
   background-color: cyan;
   color: black;
 }
