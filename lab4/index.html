@@ -1,63 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab 4 - Osaka interativa</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Osaka interativa</h1>
-        <nav>
-            <a href="../index.html">Página Inicial</a>
-        </nav>
+      <h1>Osaka interativa</h1>
+      <nav>
+        <a href="../index.html">Página Inicial</a>
+      </nav>
     </header>
 
     <main>
-        <!-- Contador: eventos click e dblclick -->
-        <section>
-            <h2>Contador de takoyaki</h2>
-            <p class="numero"><span id="contador">0</span> takoyaki</p>
-            <button type="button" onclick="incrementar()">Comer mais um</button>
-            <button type="button" onclick="decrementar()">Devolver um</button>
-            <button type="button" ondblclick="reiniciar()">Reiniciar (duplo clique)</button>
-            <p id="mensagem">Clica em "Comer mais um" para começar.</p>
-        </section>
+      <!-- Contador: eventos click e dblclick -->
+      <section>
+        <h2>Contador de takoyaki</h2>
+        <p class="numero"><span id="contador">0</span> takoyaki</p>
+        <button type="button" onclick="incrementar()">Comer mais um</button>
+        <button type="button" onclick="decrementar()">Devolver um</button>
+        <button type="button" ondblclick="reiniciar()">
+          Reiniciar (duplo clique)
+        </button>
+        <p id="mensagem">Clica em "Comer mais um" para começar.</p>
+      </section>
 
-        <!-- Fotografia: eventos mouseover, mouseout e dblclick -->
-        <section>
-            <h2>Luzes de Osaka</h2>
-            <p id="legenda">Passa o rato por cima da fotografia.</p>
-            <img id="fotografia" src="images/banner.jpg"
-                 alt="Horizonte de Osaka ao anoitecer"
-                 onmouseover="acender()"
-                 onmouseout="apagar()"
-                 ondblclick="alternarTamanho()">
-        </section>
+      <!-- Fotografia: eventos mouseover, mouseout e dblclick -->
+      <section>
+        <h2>Luzes de Osaka</h2>
+        <p id="legenda">Passa o rato por cima da fotografia.</p>
+        <img
+          id="fotografia"
+          src="images/banner.jpg"
+          alt="Horizonte de Osaka ao anoitecer"
+          onmouseover="acender()"
+          onmouseout="apagar()"
+          ondblclick="alternarTamanho()"
+        />
+      </section>
 
-        <!-- Painel: eventos mousemove e mouseout -->
-        <section>
-            <h2>Painel de néon</h2>
-            <div id="painel" onmousemove="moverNeon(event)" onmouseout="limparNeon()">
-                <p id="coordenadas">Move o rato aqui dentro.</p>
-            </div>
-        </section>
+      <!-- Painel: eventos mousemove e mouseout -->
+      <section>
+        <h2>Painel de néon</h2>
+        <div
+          id="painel"
+          onmousemove="moverNeon(event)"
+          onmouseout="limparNeon()"
+        >
+          <p id="coordenadas">Move o rato aqui dentro.</p>
+        </div>
+      </section>
 
-        <!-- Tema: evento click -->
-        <section>
-            <h2>Muda o ambiente</h2>
-            <button type="button" onclick="mudarTema('dia')">Dia</button>
-            <button type="button" onclick="mudarTema('noite')">Noite</button>
-            <p id="tema">Ambiente atual: noite em Dotonbori.</p>
-        </section>
+      <!-- Tema: evento click -->
+      <section>
+        <h2>Muda o ambiente</h2>
+        <button type="button" onclick="mudarTema('dia')">Dia</button>
+        <button type="button" onclick="mudarTema('noite')">Noite</button>
+        <p id="tema">Ambiente atual: noite em Dotonbori.</p>
+      </section>
     </main>
 
     <footer>
-        <p>DIW 2026</p>
+      <p>DIW 2026</p>
     </footer>
 
     <!-- Script no fim do body: o HTML já está carregado -->
     <script src="scripts/main.js"></script>
-</body>
+  </body>
 </html>
