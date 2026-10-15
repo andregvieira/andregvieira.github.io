@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5 - JavaScript parte 2</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Osaka em JavaScript</h1>
+      <nav>
+        <a href="../index.html">Página Inicial</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 1. mouseover / mouseout -->
+      <section>
+        <h2>1. Passa por aqui</h2>
+        <p id="passa">Passa o rato por cima das luzes de Dotonbori!</p>
+      </section>
+
+      <!-- 2. Botões de cor: querySelectorAll, forEach e data-color -->
+      <section>
+        <h2>2. Pinta-me</h2>
+        <p id="pinta-texto">Osaka, a cozinha do Japão.</p>
+        <button type="button" class="color" data-color="#ff2e88">Néon</button>
+        <button type="button" class="color" data-color="#00e5ff">Rio</button>
+        <button type="button" class="color" data-color="#ffd400">
+          Takoyaki
+        </button>
+        <button type="button" class="color" data-color="#7cff6b">Matcha</button>
+      </section>
+
+      <!-- 3. keyup: 4 cores que alternam a cada tecla -->
+      <section>
+        <h2>3. Escreve aqui</h2>
+        <label for="escrita">Cada tecla muda a cor da caixa:</label>
+        <input type="text" id="escrita" placeholder="Escreve algo..." />
+      </section>
+
+      <!-- 4. change + this: cor de fundo da página -->
+      <section>
+        <h2>4. Cor de fundo</h2>
+        <label for="seletor-fundo">Escolhe o ambiente:</label>
+        <select id="seletor-fundo">
+          <option value="#12121c">Noite em Dotonbori</option>
+          <option value="#3b1f4a">Pôr do sol no Umeda</option>
+          <option value="#0f3443">Baía de Osaka</option>
+          <option value="#4a1f1f">Lanternas vermelhas</option>
+        </select>
+      </section>
+
+      <!-- 5. Contador guardado no localStorage -->
+      <section>
+        <h2>5. Contador de takoyaki</h2>
+        <p class="numero"><span id="contador">0</span> takoyaki</p>
+        <button type="button" id="incrementar">Incrementar</button>
+        <button type="button" id="decrementar">Decrementar</button>
+        <button type="button" id="reset">Reset</button>
+        <p class="nota">O valor fica guardado mesmo depois de recarregar.</p>
+      </section>
+
+      <!-- Select flex: flex-direction -->
+      <section>
+        <h2>Select flex</h2>
+        <label for="seletor-flex">Direção das bolas:</label>
+        <select id="seletor-flex">
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+          <option value="column">column</option>
+          <option value="column-reverse">column-reverse</option>
+        </select>
+        <div id="caixa-flex">
+          <div class="bola">1</div>
+          <div class="bola">2</div>
+          <div class="bola">3</div>
+          <div class="bola">4</div>
+        </div>
+      </section>
+
+      <!-- onsubmit: formulário nome + idade -->
+      <section>
+        <h2>Apresenta-te</h2>
+        <form id="formulario">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required />
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" min="0" required />
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="saudacao"></p>
+      </section>
+
+      <!-- setInterval: contador automático -->
+      <section>
+        <h2>Temporizador</h2>
+        <p class="numero"><span id="relogio">0</span> segundos em Osaka</p>
+        <button type="button" id="pausa">Pausar</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
