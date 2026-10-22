@@ -1,0 +1,19 @@
+   main {
+     background-color: #f4f1ea;
+     margin: 20px;
+     padding: 20px;
+     border-radius: 12px;
+   }
+
+   section {
+     border: 1px solid grey;
+     padding: 15px;
+     margin: 15px 0;
+   }
+
+   form {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     max-width: 300px;
+   }
