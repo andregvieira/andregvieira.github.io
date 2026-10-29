@@ -1,3 +1,4 @@
+/* global produtos */
 if (!localStorage.getItem('produtos-selecionados')) {
   localStorage.setItem('produtos-selecionados', '[]')
 }
