@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f4f1f6;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #5e1475;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem 2rem;
+}
+
+main > section > h2 {
+  text-align: center;
+}
+
+#lista-produtos,
+#lista-cesto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+article h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+article img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+article .preco {
+  font-weight: bold;
+}
+
+article .descricao {
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: left;
+  background-color: #f4f1f6;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+article button {
+  margin-top: auto;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #5e1475;
+  border-radius: 4px;
+  background-color: white;
+  color: #5e1475;
+  cursor: pointer;
+}
+
+article button:hover {
+  background-color: #5e1475;
+  color: white;
+}
+
+#cesto {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #5e1475;
+}
+
+.total {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #5e1475;
+  color: white;
+}
